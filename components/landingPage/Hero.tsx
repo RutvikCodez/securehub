@@ -1,6 +1,6 @@
 import { heroSectionLinkData } from "@/utils/data";
-import Link from "next/link";
 import React from "react";
+import CommonLink from "../common/CommonLink";
 
 const Hero = () => {
   return (
@@ -12,16 +12,9 @@ const Hero = () => {
         <p className="text-lg md:text-xl">
           Protect your email and passwords with our powerful tools.
         </p>
-        <div className="flex justify-center gap-4">
-          {heroSectionLinkData.map(({ className, link, name }, index) => (
-            <Link
-              key={index}
-              href={link}
-              className={className}
-              prefetch={false}
-            >
-              {name}
-            </Link>
+        <div className="flex justify-center gap-4 max-md:flex-col">
+          {heroSectionLinkData.map(({ style, link, name }, index) => (
+            <CommonLink link={link} name={name} key={index} style={style} />
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { linkDataType } from "./types";
+
 export const headerLinkData = [
   {
     name: "Email Validator",
@@ -9,18 +11,22 @@ export const headerLinkData = [
   },
 ];
 
-export const heroSectionLinkData = [
+export const heroSectionLinkData: linkDataType = [
   {
     name: "Try Email Validator",
     link: "#",
-    className:
-      "inline-flex items-center justify-center rounded-md bg-primary-foreground px-6 py-3 text-primary font-medium transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+    style: {
+      backgroundColor: "hsl(var(--primary-foreground))",
+      color: "hsl(var(--primary));",
+    },
   },
   {
     name: "Explore Password Manager",
     link: "#",
-    className:
-      "inline-flex items-center justify-center rounded-md border border-primary-foreground px-6 py-3 text-primary-foreground font-medium transition-colors hover:bg-primary-foreground hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+    style: {
+      border: "1px solid hsl(var(--primary-foreground))",
+      color: "hsl(var(--primary-foreground))",
+    },
   },
 ];
 
@@ -86,5 +92,35 @@ export const accrodianData = [
   {
     title: "What's the difference between the plans?",
     desc: "The Free plan is for personal use, while the Pro and Enterprise plans offer additional features like team sharing, advanced reporting, and SSO integration for businesses and organizations.",
+  },
+];
+
+export const contactFormData = [
+  {
+    id: "name",
+    labelName: "Name",
+    type: "text",
+    placeholder: "John Doe",
+  },
+  {
+    id: "email",
+    labelName: "Email",
+    type: "email",
+    placeholder: "example@domain.com",
+  },
+];
+
+export const footerLinkData = [
+  {
+    name: "Privacy",
+    link: "#",
+  },
+  {
+    name: "Terms",
+    link: "#",
+  },
+  {
+    name: "Security",
+    link: "#",
   },
 ];

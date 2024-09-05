@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { MenuIcon, LockIcon } from "lucide-react";
+import CommonLink from "./CommonLink";
+import CommonButton from "./CommonButton";
 
 const Header = () => {
   return (
@@ -13,19 +15,21 @@ const Header = () => {
       </Link>
       <nav className="hidden md:flex items-center gap-6">
         {headerLinkData.map(({ link, name }, index) => (
-          <Link
+          <CommonLink
+            link={link}
+            name={name}
             key={index}
-            href={link}
-            className="hover:underline"
-            prefetch={false}
-          >
-            {name}
-          </Link>
+            style={{
+              padding: "0px",
+            }}
+          />
         ))}
       </nav>
-      <Button variant="outline" className="md:hidden">
-        <MenuIcon className="h-6 w-6" />
-      </Button>
+      <CommonButton
+        name={<MenuIcon className="h-6 w-6" />}
+        className="md:hidden"
+        variant={"outline"}
+      />
     </header>
   );
 };

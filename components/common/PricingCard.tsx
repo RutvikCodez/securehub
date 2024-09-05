@@ -9,6 +9,7 @@ import {
 } from "../ui/card";
 import { Button } from "../ui/button";
 import { pricingCardProps } from "@/utils/types";
+import CommonButton from "./CommonButton";
 
 const PricingCard = ({ data, desc, title, ...props }: pricingCardProps) => {
   return (
@@ -29,7 +30,7 @@ const PricingCard = ({ data, desc, title, ...props }: pricingCardProps) => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">Get Started</Button>
+        <CommonButton className="w-full" name="Get Started" />
       </CardFooter>
       </div>
     </Card>
