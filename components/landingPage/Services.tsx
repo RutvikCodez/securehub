@@ -62,7 +62,7 @@ const Services = () => {
 
   return (
     <section className="py-12 md:py-20 bg-accent-1 text-white">
-      <div className="max-w-5xl mx-auto w-full flex flex-col items-center gap-5">
+      <div className="max-w-5xl mx-auto w-full flex flex-col items-center gap-5 max-xl:max-w-4xl max-lg:max-w-2xl max-md:max-w-sm">
         <div className="max-w-xl mx-auto w-full flex flex-col gap-2 items-center text-center">
           <h3 className="text-accent-1 text-1 leading-accent-1">
             our services
@@ -71,7 +71,7 @@ const Services = () => {
             We Offer Professional Security Solutions
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
           {servicesData.map(({ description, title, svg }, index) => (
             <div
               key={index}
