@@ -90,3 +90,9 @@ export type managerButtonDataType = {
     | undefined;
   type?: "submit" | "reset" | "button" | undefined;
 }[];
+
+export type authWrapperDataType = {
+  title: string;
+  desc: string;
+  children: React.ReactNode;
+}
