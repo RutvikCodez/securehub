@@ -5,12 +5,14 @@ import Hero from "@/components/landingPage/Hero";
 import PasswordManager from "@/components/landingPage/PasswordManager";
 import Pricing from "@/components/landingPage/Pricing";
 import Services from "@/components/landingPage/Services";
+import WhyChooseUs from "@/components/landingPage/WhyChooseUs";
 
 export default function Home() {
   return (
    <main>
     <Hero />
     <Services />
+    <WhyChooseUs />
     <EmailValidator />
     <PasswordManager />
     <Pricing />

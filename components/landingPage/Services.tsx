@@ -75,13 +75,13 @@ const Services = () => {
           {servicesData.map(({ description, title, svg }, index) => (
             <div
               key={index}
-              className="p-11 border flex flex-col gap-3 border-accent-1 items-center"
+              className="p-11 border flex flex-col gap-3 border-accent-1 items-center transition-all duration-300 ease-in-out hover:bg-gradient-accent-4 group"
             >
               {svg}
               <h2 className="text-accent-1 font-semibold leading-accent-1">
                 {title}
               </h2>
-              <p className="text-2 text-accent-5 leading-accent-2 font-light">
+              <p className="text-2 text-accent-5 leading-accent-2 font-light group-hover:text-white">
                 {description}
               </p>
             </div>

@@ -17,16 +17,21 @@ const config: Config = {
         "gradient-accent-2": "linear-gradient(to right, #FFB6C1, #FFC5C5)",
         "gradient-accent-3":
           "linear-gradient(120deg, #4B2999 0%, #57EEF1 100%);",
+        "gradient-accent-4":
+          "linear-gradient(60deg, #4B2999 0%, #57EEF1 100%);",
       },
       backgroundColor: {
         "accent-1": "#0e1625",
+        "accent-2": "#57EEF1",
       },
       borderColor: {
         "accent-1": "rgba(236, 236, 248, 0.15)",
       },
       textColor: {
         "1": "#57EEF1",
-		"2": "#a2abbd",
+        "2": "#a2abbd",
+        "3": "#4b2999",
+        "4": "#1f1f1f",
       },
       fontSize: {
         "accent-1": "20px",
@@ -38,6 +43,7 @@ const config: Config = {
       lineHeight: {
         "accent-1": "1.1em",
         "accent-2": "22px",
+        "accent-3": "1.5em",
       },
       borderRadius: {
         lg: "var(--radius)",
