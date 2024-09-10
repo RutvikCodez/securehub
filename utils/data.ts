@@ -1,4 +1,4 @@
-import { linkDataType } from "./types";
+import { linkDataType, managerButtonDataType } from "./types";
 
 export const headerLinkData = [
   {
@@ -124,3 +124,80 @@ export const footerLinkData = [
     link: "#",
   },
 ];
+
+export const ManagerLabelCheckboxData = [
+  {
+    id: "uppercase",
+    defaultChecked: true,
+  },
+  {
+    id: "lowercase",
+    defaultChecked: true,
+  },
+  {
+    id: "numbers",
+    defaultChecked: true,
+  },
+  {
+    id: "symbols",
+    defaultChecked: false,
+  },
+];
+
+export const generatorLabelCheckboxData = [
+  {
+    id: "webiste",
+    type: "text",
+    placeholder: "example.com",
+  },
+  {
+    id: "Username",
+    type: "text",
+    placeholder: "johndoe",
+  },
+  {
+    id: "password",
+    type: "password",
+    placeholder: "",
+  },
+];
+
+export const managerButtonData: managerButtonDataType = [
+  {
+    name: "Delete",
+    variant: "outline",
+    type: "button"
+  },
+  {
+    name: "Edit",
+    variant: "outline",
+    type: "button"
+  },
+  {
+    name: "Save",
+    type: "submit"
+  },
+]
+
+export const passwordData = [
+  {
+    website: "http://example.com",
+    name: "John Doe"
+  },
+  {
+    website: "http://example.com",
+    name: "John Doe"
+  },
+  {
+    website: "http://example.com",
+    name: "John Doe"
+  },
+  {
+    website: "http://example.com",
+    name: "John Doe"
+  },
+  {
+    website: "http://example.com",
+    name: "John Doe"
+  },
+]

@@ -4,11 +4,13 @@ import FAQ from "@/components/landingPage/FAQ";
 import Hero from "@/components/landingPage/Hero";
 import PasswordManager from "@/components/landingPage/PasswordManager";
 import Pricing from "@/components/landingPage/Pricing";
+import Services from "@/components/landingPage/Services";
 
 export default function Home() {
   return (
    <main>
     <Hero />
+    <Services />
     <EmailValidator />
     <PasswordManager />
     <Pricing />

@@ -27,7 +27,7 @@ export type linkType = {
 };
 
 export type labelProps = {
-  id: string;
+  id?: string;
   name: string;
 };
 
@@ -36,17 +36,57 @@ export type inputProps = {
   id: string;
   placeholder: string;
   className?: string;
+  value?: string | number | readonly string[] | undefined;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
 };
 
 export type buttonProps = {
+  size?: "default" | "sm" | "lg" | "icon" | null | undefined;
   type?: "submit" | "reset" | "button" | undefined;
   name: string | React.JSX.Element;
   className?: string;
-  variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined
+  variant?:
+    | "link"
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | null
+    | undefined;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 };
 
 export type textAreaProps = {
-  id: string
-  rows: number
-  placeholder: string
-}
+  id: string;
+  rows: number;
+  placeholder: string;
+};
+
+export type validateEmailApiData = {
+  domain: string | null;
+  email: string | null;
+  format_valid: boolean | null;
+  user: string | null;
+};
+
+export type cardProps = {
+  title?: string;
+  desc?: string;
+  children: React.ReactNode;
+  footer?: string | React.JSX.Element;
+};
+
+export type managerButtonDataType = {
+  name: string;
+  variant?:
+    | "default"
+    | "link"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | null
+    | undefined;
+  type?: "submit" | "reset" | "button" | undefined;
+}[];

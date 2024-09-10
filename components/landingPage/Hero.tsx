@@ -1,22 +1,28 @@
-import { heroSectionLinkData } from "@/utils/data";
+import Image from "next/image";
 import React from "react";
-import CommonLink from "../common/CommonLink";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-primary py-12 md:py-20 px-6 md:px-8 text-center text-primary-foreground">
-      <div className="max-w-3xl mx-auto flex flex-col gap-4">
-        <h1 className="text-3xl md:text-5xl font-bold">
-          Secure Your Digital Life
-        </h1>
-        <p className="text-lg md:text-xl">
-          Protect your email and passwords with our powerful tools.
-        </p>
-        <div className="flex justify-center gap-4 max-md:flex-col">
-          {heroSectionLinkData.map(({ style, link, name }, index) => (
-            <CommonLink link={link} name={name} key={index} style={style} />
-          ))}
+    <section className="h-[90vh] relative">
+      <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
+      <div className="absolute inset-0 flex flex-col items-start justify-center gap-6 z-20 text-white max-w-3xl px-10">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-accent-3 font-bold leading-tight">
+            Streamline Your Security with Secure Hub
+          </h1>
+          <p className="text-muted-foreground">
+            Effortlessly manage passwords, validate emails, and store data
+            securely with advanced features. Enjoy seamless integration and
+            dedicated support.
+          </p>
         </div>
+        <Button className="bg-gradient-accent-3 font-semibold transition-all ease-in-out duration-300 hover:bg-gradient-accent-2 hover:text-black rounded-none py-5 px-8 text-accent-2">
+          Get Started
+        </Button>
+      </div>
+      <div className="relative h-full">
+        <Image alt="Hero Image Ambient" src={"/static/images/hero.jpg"} fill />
       </div>
     </section>
   );
